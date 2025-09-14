@@ -21,3 +21,6 @@ mus-*.tar
 
 # Temporary files, for example, from tests.
 /tmp/
+
+# Enviroment variable files
+*.env

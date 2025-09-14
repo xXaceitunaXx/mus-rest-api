@@ -8,7 +8,8 @@ defmodule Mus.Application do
   @impl true
   def start(_type, _args) do
     children = [
-      {Plug.Cowboy, scheme: :http, plug: Mus.Router, options: [port: 8000]}
+      {Plug.Cowboy, scheme: :http, plug: Mus.Router, options: [port: 8000]}, # HTTP Server
+      Mus.Repo # DB Connection
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
