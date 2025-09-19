@@ -5,6 +5,8 @@ defmodule Mus.Repo.Migrations.CreateJugadorTable do
     create table(:jugador, primary_key: false) do
       add :usuario, :string, primary_key: true, null: false
       add :apodo, :string, null: false
+      # Falta añadir el campo de la contraseña, va a ser un dato personalizado de elixir con
+      # pipelines y movidas de estas para automatizar el hasheado y guardado y tal...
     end
 
     # Constraint para asegurar que usuario no esté vacío
