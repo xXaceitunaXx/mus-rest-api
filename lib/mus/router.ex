@@ -11,6 +11,9 @@ defmodule Mus.Router do
 
   get "/", do: HelloController.index(conn)
 
+  # TODO implementar la funcionalidad, creo que hay que hacer mas cosas, un get de parejas por ejemplo
+  # pensar en esto cuando conozcamos bien los casos de uso de la app
+
   get "/partida/:id", do: PartidasController.get_partida(conn)
 
   get "/:jugador", do: JugadoresController.get_jugador(conn)
